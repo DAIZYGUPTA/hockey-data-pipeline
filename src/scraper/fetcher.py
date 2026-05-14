@@ -3,9 +3,9 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-from src.constants.constants import HEADERS
 from src.config.config import REQUEST_TIMEOUT, MAX_RETRIES
 from src.utils.logger import setup_logger
+from src.config.settings import USER_AGENT
 
 logger = setup_logger()
 
@@ -31,7 +31,9 @@ def fetch_page(session, url, params=None):
     try:
         response = session.get(
             url,
-            headers=HEADERS,
+            headers = {
+    "User-Agent": USER_AGENT 
+},
             params=params,
             timeout=REQUEST_TIMEOUT
         )

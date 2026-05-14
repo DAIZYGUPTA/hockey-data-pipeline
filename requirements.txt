@@ -5,3 +5,4 @@ lxml
 pyarrow
 fastparquet
 matplotlib
+python-dotenv

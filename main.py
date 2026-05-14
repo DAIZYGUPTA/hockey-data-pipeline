@@ -1,7 +1,9 @@
 import time
+import argparse
+
 
 from src.constants.constants import BASE_URL
-from src.config.config import SCRAPER_DELAY
+from src.config.settings import SCRAPER_DELAY
 
 from src.utils.logger import setup_logger
 
@@ -194,13 +196,26 @@ def run_pipeline(query=None):
     return df
 
 
+def parse_arguments():
+
+    parser = argparse.ArgumentParser(
+        description="Hockey Teams Scraping Pipeline"
+    )
+
+    parser.add_argument(
+        "--query",
+        type=str,
+        required=False,
+        help="Filter teams by query"
+    )
+
+    return parser.parse_args()
+
 if __name__ == "__main__":
 
-    # Example:
-    # query=None → scrape all teams
-    # query="Boston" → filtered scraping
+    args = parse_arguments()
 
-    df = run_pipeline(query=None)
+    df = run_pipeline(query=args.query)
 
     print("\nFinal Dataset Preview:\n")
 
