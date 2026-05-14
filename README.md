@@ -1,48 +1,74 @@
-Hockey Teams Scraping Pipeline
-Overview
+#  Hockey Teams Scraping Pipeline
 
-This project is a modular end-to-end web scraping and data processing pipeline built using Python.
+##  Overview
+
+This project is a modular **end-to-end web scraping and data processing pipeline** built using Python.
 
 The pipeline scrapes hockey team data from:
 
-https://www.scrapethissite.com/pages/forms/
+ https://www.scrapethissite.com/pages/forms/
 
 and transforms raw HTML into:
 
-structured datasets
-cleaned analytical data
-engineered ML-ready features
-visual reports
+- Structured datasets
+- Cleaned analytical data
+- Engineered ML-ready features
+- Visual reports
 
-The project was built step-by-step following real-world software engineering and data engineering practices.
+The project was built step-by-step following real-world:
 
-Project Features
-Web Scraping
-Pagination handling
-Query-based scraping
-Session-based requests
-Request retry handling
-Safe HTML parsing
-Modular scraper architecture
-Data Engineering
-Validation layer
-Cleaning layer
-Feature engineering layer
-EDA (Exploratory Data Analysis)
-Visualization layer
-Storage
-Raw HTML saving
-CSV export
-Parquet export
-Organized data directories
-Engineering Practices
-Modular project structure
-Logging system
-Environment variable support (.env)
-CLI support using argparse
-Config separation
-Reusable architecture
-Project Structure
+- Data Engineering practices
+- Software Engineering principles
+- ML pipeline structuring approaches
+
+---
+
+#  Features
+
+##  Web Scraping
+
+- Pagination handling
+- Query-based scraping
+- Session-based requests
+- Request retry handling
+- Safe HTML parsing
+- Modular scraper architecture
+
+---
+
+##  Data Engineering
+
+- Validation layer
+- Cleaning layer
+- Feature engineering
+- Exploratory Data Analysis (EDA)
+- Visualization layer
+
+---
+
+##  Storage
+
+- Raw HTML saving
+- CSV export
+- Parquet export
+- Organized data directories
+
+---
+
+##  Engineering Practices
+
+- Modular project structure
+- Logging system
+- Environment variable support (`.env`)
+- CLI support using `argparse`
+- Config separation
+- Reusable architecture
+
+---
+
+#  Project Structure
+
+```bash
 hockey-scraping-pipeline/
 │
 ├── config/
@@ -95,16 +121,28 @@ hockey-scraping-pipeline/
 ├── README.md
 ├── requirements.txt
 └── venv/
-Technologies Used
-Python
-Requests
-BeautifulSoup4
-Pandas
-Matplotlib
-PyArrow
-python-dotenv
-argparse
-Pipeline Flow
+```
+
+---
+
+#  Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Requests | HTTP requests |
+| BeautifulSoup4 | HTML parsing |
+| Pandas | Data processing |
+| Matplotlib | Visualization |
+| PyArrow | Parquet support |
+| python-dotenv | Environment variables |
+| argparse | CLI support |
+
+---
+
+#  Pipeline Flow
+
+```text
 Fetch Data
     ↓
 Parse HTML
@@ -120,62 +158,113 @@ EDA
 Visualization
     ↓
 Save Outputs
-Features Engineered
+```
+
+---
+
+#  Feature Engineering
 
 The pipeline creates additional analytical features such as:
 
-Total Games
-Goal Difference Ratio
-Goals Per Game
-Team Category
+- Total Games
+- Goal Difference Ratio
+- Goals Per Game
+- Team Category
 
 These features help prepare the dataset for:
 
-analytics
-dashboards
-machine learning workflows
-Generated Outputs
-Raw Data
+- Analytics
+- Dashboards
+- Machine Learning workflows
+
+---
+
+#  Generated Outputs
+
+##  Raw Data
+
+```bash
 /data/raw/
+```
 
 Contains saved HTML pages.
 
-Processed Data
+---
+
+##  Processed Data
+
+```bash
 /data/processed/
+```
 
 Contains:
 
-CSV datasets
-Parquet datasets
-Reports
+- CSV datasets
+- Parquet datasets
+
+---
+
+##  Reports
+
+```bash
 /data/reports/
+```
 
 Contains generated visualizations:
 
-Top Teams Plot
-Yearly Win Trends
-Correlation Matrix
-Installation
-Clone Repository
+- Top Teams Plot
+- Yearly Win Trends
+- Correlation Matrix
+
+---
+
+#  Installation
+
+## 1️ Clone Repository
+
+```bash
 git clone <your-repo-url>
 cd hockey-scraping-pipeline
-Create Virtual Environment
+```
+
+---
+
+## 2️ Create Virtual Environment
+
+```bash
 python -m venv venv
-Activate Environment
-Windows
+```
+
+---
+
+## 3️ Activate Environment
+
+### Windows
+
+```bash
 venv\Scripts\activate
-Mac/Linux
-source venv/bin/activate
-Install Requirements
+```
+
+
+## 4️ Install Requirements
+
+```bash
 pip install -r requirements.txt
-Environment Variables
+```
+
+---
+
+#  Environment Variables
 
 Create:
 
+```bash
 .env
+```
 
 Example:
 
+```env
 SCRAPER_DELAY=1
 
 USER_AGENT=Mozilla/5.0
@@ -185,60 +274,101 @@ RAW_DATA_PATH=data/raw
 PROCESSED_DATA_PATH=data/processed
 
 REPORTS_PATH=data/reports
-Running The Pipeline
-Scrape All Teams
+```
+
+---
+
+# Running The Pipeline
+
+## Scrape All Teams
+
+```bash
 python main.py
-Scrape Specific Teams
+```
+
+---
+
+## Scrape Specific Teams
 
 Example:
 
+```bash
 python main.py --query Boston
+```
 
 You can replace:
 
-Boston
-Chicago
-Detroit
-etc.
-Example Pipeline Output
+- Boston
+- Chicago
+- Detroit
+- etc.
+
+---
+
+#  Example Pipeline Output
+
+```text
 Pipeline started
 Total pages detected: 24
 Processing page 1
 Collected 25 records from page 1
 ...
 Pipeline completed successfully
-Learning Outcomes
+```
+
+---
+
+#  Learning Outcomes
 
 This project helped me learn:
 
-Modular Python architecture
-Data pipeline design
-Web scraping best practices
-Pagination handling
-Data validation
-Data cleaning
-Feature engineering
-Exploratory data analysis
-Visualization workflows
-Environment variable management
-CLI development
-Logging systems
-Future Improvements
+- Modular Python architecture
+- Data pipeline design
+- Web scraping best practices
+- Pagination handling
+- Data validation
+- Data cleaning
+- Feature engineering
+- Exploratory data analysis
+- Visualization workflows
+- Environment variable management
+- CLI development
+- Logging systems
+
+---
+
+#  Future Improvements
 
 Planned improvements:
 
-YAML configuration
-Pytest testing framework
-Docker support
-CI/CD pipelines
-Scheduling automation
-Database integration
-API integration
-Selenium/Playwright support
-Author
+- YAML configuration
+- Pytest testing framework
+- Docker support
+- CI/CD pipelines
+- Scheduling automation
+- Database integration
+- API integration
+- Selenium/Playwright support
 
-Built as part of my Learning in Public journey into:
+---
 
-Data Engineering
-Machine Learning Engineering
-AI Engineering
+#  Author
+
+Built as part of my **Learning in Public** journey into:
+
+- Data Engineering
+- Machine Learning Engineering
+- AI Engineering
+
+---
+
+#  Support
+
+If you found this project useful:
+
+- ⭐ Star the repository
+- 🍴 Fork the project
+- 🧠 Share feedback
+- 🤝 Connect on LinkedIn
+
+---
