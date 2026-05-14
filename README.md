@@ -366,9 +366,9 @@ Built as part of my **Learning in Public** journey into:
 
 If you found this project useful:
 
-- ⭐ Star the repository
-- 🍴 Fork the project
-- 🧠 Share feedback
-- 🤝 Connect on LinkedIn
+-  Star the repository
+-  Fork the project
+-  Share feedback
+-  Connect on LinkedIn (https://www.linkedin.com/in/daizy-gupta-6519b388/)
 
 ---
